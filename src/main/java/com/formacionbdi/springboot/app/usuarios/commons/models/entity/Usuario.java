@@ -38,13 +38,13 @@ public class Usuario implements Serializable {
 	@JoinTable(name = "usuarios_roles", joinColumns = @JoinColumn(name = "usuario_id"), 
 	inverseJoinColumns = @JoinColumn(name = "role_id"), 
 	uniqueConstraints = {@UniqueConstraint(columnNames = { "usuario_id", "role_id" }) })
-	private List<com.formacionbdi.springboot.app.usuarios.models.entity.Role> roles;
+	private List<Role> roles;
 
-	public List<com.formacionbdi.springboot.app.usuarios.models.entity.Role> getRoles() {
+	public List<Role> getRoles() {
 		return roles;
 	}
 
-	public void setRoles(List<com.formacionbdi.springboot.app.usuarios.models.entity.Role> roles) {
+	public void setRoles(List<Role> roles) {
 		this.roles = roles;
 	}
 
